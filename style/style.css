@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 110px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --clr: #222327;
+}
+
+body {
+  background: var(--clr);
+}
+
+.body {
+  margin-top: -140px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation {
+  margin-top: 10%;
+  width: 90%;
+  height: 70px;
+  background: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 15px;
+}
+
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style-type: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: var(--clr);
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: .75em;
+  letter-spacing: .05em;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navigation ul li.active a .icon {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.navigation ul li.active a .text {
+  opacity: 1;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.indicator {
+  position: absolute;
+  width: 16%;
+  height: 80%;
+  background: #29fd53;
+  top: -40%;
+  border-radius: 100%;
+  border: 3px solid var(--clr);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.indicator::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 3px);
+  left: -46%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top-right-radius: 100%;
+  -webkit-box-shadow: 1px -10px 0 0 var(--clr);
+          box-shadow: 1px -10px 0 0 var(--clr);
+}
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 3px);
+  right: -46%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top-left-radius: 100%;
+  -webkit-box-shadow: -1px -10px 0 0 var(--clr);
+          box-shadow: -1px -10px 0 0 var(--clr);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  -webkit-transform: translateX(calc(70px * 0));
+          transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+  -webkit-transform: translateX(calc(202px));
+          transform: translateX(calc(202px));
+}
+
+#Home {
+  display: block;
+  margin-top: 140px;
+}
+
+section {
+  margin-top: 150px;
+}
+
+section h1 {
+  color: #29fd53;
+  margin-left: 8vw;
+}
+
+section p {
+  color: #FFF;
+}
+
+.blank {
+  margin-top: 1000px;
+}
+/*# sourceMappingURL=style.css.map */
